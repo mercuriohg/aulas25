@@ -9,3 +9,8 @@ Aqui estarão as pastas das principais matérias do curso de Informática Integr
 farei durante este ano. Espero evoluir muito mais meus conhecimentos sobre essa área.
 
 # 📎 Pastas
+
+├── redescomputadores/         # Redes de Computadores
+├── bancodados/         # Banco de Dados
+├── programacao3/    # Programação III
+└── desenvolvimentoweb/    # Programação Web
