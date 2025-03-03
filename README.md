@@ -7,10 +7,11 @@ Aqui estarão as pastas das principais matérias do curso de Informática Integr
 farei durante este ano. Espero evoluir muito mais meus conhecimentos sobre essa área.
 
 # 📎 Pastas
+```
 ├── redescomputadores/         # Redes de Computadores
-<br>├── bancodados/         # Banco de Dados
-<br>├── programacao3/    # Programação III
-<br>└── desenvolvimentoweb/    # Programação Web
-
+├── bancodados/         # Banco de Dados
+├── programacao3/    # Programação III
+└── desenvolvimentoweb/    # Programação Web
+```
 Serão anotados aqui nessas pastas os principais projetos que farei durante esse ano.
 > Arquivos de uso pessoal e de anotação. 👜
