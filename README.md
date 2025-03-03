@@ -13,4 +13,4 @@ farei durante este ano. Espero evoluir muito mais meus conhecimentos sobre essa 
 <br>└── desenvolvimentoweb/    # Programação Web
 
 Serão anotados aqui nessas pastas os principais projetos que farei durante esse ano.
-> Arquivos de uso pessoal e de anotação. 💼
+> Arquivos de uso pessoal e de anotação. 👜
