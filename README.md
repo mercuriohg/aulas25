@@ -8,7 +8,6 @@ farei durante este ano. Espero evoluir muito mais meus conhecimentos sobre essa 
 
 # 📎 Pastas
 ```
-├── redescomputadores/         # Redes de Computadores
 ├── bancodados/         # Banco de Dados
 ├── programacao3/    # Programação III
 └── desenvolvimentoweb/    # Programação Web
