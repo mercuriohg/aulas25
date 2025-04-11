@@ -1,3 +1,4 @@
+```java
 new javax.swing.JDesktopPane(){
  private Image image;
 {
@@ -15,3 +16,4 @@ catch (Exception e) {
     g.drawImage(image,0,0, getWidth(), getHeight(), this);
 }
 }
+```
