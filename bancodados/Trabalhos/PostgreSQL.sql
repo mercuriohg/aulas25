@@ -43,11 +43,11 @@ CREATE TABLE Cargo (
   FOREIGN KEY (Professor) REFERENCES Professor(Cod_Professor)
 );
 
-INSERT INTO Faculdade VALUES (1, 'UFSP', 'Matemática', NULL);
-INSERT INTO Faculdade VALUES (2, 'USP', 'Física', NULL);
-INSERT INTO Faculdade VALUES (3, 'PUC', 'História', NULL);
+INSERT INTO Faculdade VALUES (1, 'UFSP', 'Matematica', NULL);
+INSERT INTO Faculdade VALUES (2, 'USP', 'Fisica', NULL);
+INSERT INTO Faculdade VALUES (3, 'PUC', 'Historia', NULL);
 INSERT INTO Faculdade VALUES (4, 'UNESP', 'Biologia', NULL);
-INSERT INTO Faculdade VALUES (5, 'UFRJ', 'Química', NULL);
+INSERT INTO Faculdade VALUES (5, 'UFRJ', 'Quimica', NULL);
 INSERT INTO Faculdade VALUES (6, 'UFBA', 'Geografia', NULL);
 INSERT INTO Faculdade VALUES (7, 'UNB', 'Filosofia', NULL);
 INSERT INTO Faculdade VALUES (8, 'UFSC', 'Letras', NULL);
@@ -58,7 +58,7 @@ INSERT INTO Professor VALUES (1, 'Carlos Silva', 'Mestre', NULL, 1);
 INSERT INTO Professor VALUES (2, 'Ana Costa', 'Doutora', NULL, 2);
 INSERT INTO Professor VALUES (3, 'Marcos Lima', 'Especialista', NULL, 3);
 INSERT INTO Professor VALUES (4, 'Fernanda Rocha', 'Doutora', NULL, 4);
-INSERT INTO Professor VALUES (5, 'João Alves', 'Mestre', NULL, 5);
+INSERT INTO Professor VALUES (5, 'Joao Alves', 'Mestre', NULL, 5);
 INSERT INTO Professor VALUES (6, 'Paula Mendes', 'Mestre', NULL, 6);
 INSERT INTO Professor VALUES (7, 'Luciana Teixeira', 'Doutora', NULL, 7);
 INSERT INTO Professor VALUES (8, 'Rafael Souza', 'Especialista', NULL, 8);
