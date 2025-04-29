@@ -1,6 +1,6 @@
 ```txt
 
-ESCOLA(Cod_Escola, Nome, Endereco, Professores, Alunos, Cod_Professor)
+ESCOLA(Cod_Escola, Nome, Endereco, Cod_Professor)
 Cod_Professor Referencia Professor
 
 PROFESSOR(Cod_Professor, Nome, Formacao, Cod_Escola, Cod_Faculdade)
