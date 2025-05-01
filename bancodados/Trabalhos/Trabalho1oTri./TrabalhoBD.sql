@@ -1,88 +1,105 @@
+CREATE TABLE Escola (
+    CodEscola INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Endereco VARCHAR(200)
+);
+
 CREATE TABLE Faculdade (
-  Cod_Faculdade INTEGER NOT NULL,
-  Nome VARCHAR(70) NOT NULL,
-  Curso VARCHAR(40) NOT NULL,
-  Cod_Professor INTEGER,
-  PRIMARY KEY (Cod_Faculdade),
-  FOREIGN KEY (Cod_Professor) REFERENCES Professor(Cod_Professor)
+    CodFaculdade INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Curso VARCHAR(100)
+);
+
+CREATE TABLE Interseries (
+    CodInterseries INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Turma VARCHAR(50)
 );
 
 CREATE TABLE Professor (
-  Cod_Professor INTEGER NOT NULL,
-  Nome VARCHAR(50) NOT NULL,
-  Formacao VARCHAR(30) NOT NULL,
-  Cod_Escola INTEGER,
-  Cod_Faculdade INTEGER NOT NULL,
-  PRIMARY KEY (Cod_Professor),
-  FOREIGN KEY (Cod_Escola) REFERENCES Escola(Cod_Escola),
-  FOREIGN KEY (Cod_Faculdade) REFERENCES Faculdade(Cod_Faculdade)
+    CodProfessor INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Celular VARCHAR(20),
+    CodFaculdade INT,
+    CodEscola INT,
+    Coordenador VARCHAR(10),
+    Diretor VARCHAR(10),
+    FOREIGN KEY (CodFaculdade) REFERENCES Faculdade(CodFaculdade),
+    FOREIGN KEY (CodEscola) REFERENCES Escola(CodEscola)
 );
 
-CREATE TABLE Escola (
-  Cod_Escola INTEGER NOT NULL,
-  Nome VARCHAR(100) NOT NULL,
-  Endereco VARCHAR(50) NOT NULL,
-  Professores INTEGER,
-  Alunos INTEGER,
-  Cod_Professor INTEGER,
-  PRIMARY KEY (Cod_Escola),
-  FOREIGN KEY (Cod_Professor) REFERENCES Professor(Cod_Professor)
+CREATE TABLE Estudante (
+    CodEstudante INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Gmail VARCHAR(100),
+    CodEscola INT,
+    CodInterseries INT,
+    FOREIGN KEY (CodEscola) REFERENCES Escola(CodEscola),
+    FOREIGN KEY (CodInterseries) REFERENCES Interseries(CodInterseries)
 );
 
-CREATE TABLE Cargo (
-  Cod_Escola INTEGER NOT NULL,
-  Cod_Professor INTEGER NOT NULL,
-  Diretor INTEGER NOT NULL,
-  Coordenador INTEGER NOT NULL,
-  Professor INTEGER NOT NULL,
-  PRIMARY KEY (Cod_Escola, Cod_Professor),
-  FOREIGN KEY (Cod_Escola) REFERENCES Escola(Cod_Escola),
-  FOREIGN KEY (Cod_Professor) REFERENCES Professor(Cod_Professor),
-  FOREIGN KEY (Diretor) REFERENCES Professor(Cod_Professor),
-  FOREIGN KEY (Coordenador) REFERENCES Professor(Cod_Professor),
-  FOREIGN KEY (Professor) REFERENCES Professor(Cod_Professor)
-);
 
-INSERT INTO Faculdade VALUES (1, 'UFSP', 'Matematica', NULL);
-INSERT INTO Faculdade VALUES (2, 'USP', 'Fisica', NULL);
-INSERT INTO Faculdade VALUES (3, 'PUC', 'Historia', NULL);
-INSERT INTO Faculdade VALUES (4, 'UNESP', 'Biologia', NULL);
-INSERT INTO Faculdade VALUES (5, 'UFRJ', 'Quimica', NULL);
-INSERT INTO Faculdade VALUES (6, 'UFBA', 'Geografia', NULL);
-INSERT INTO Faculdade VALUES (7, 'UNB', 'Filosofia', NULL);
-INSERT INTO Faculdade VALUES (8, 'UFSC', 'Letras', NULL);
-INSERT INTO Faculdade VALUES (9, 'UTFPR', 'Engenharia', NULL);
-INSERT INTO Faculdade VALUES (10, 'UNIFESP', 'Educação Física', NULL);
+-- Inserções para Escola
+INSERT INTO Escola VALUES
+(1, 'Escola Alfa', 'Rua das Palmeiras, 123'),
+(2, 'Colégio Beta', 'Av. Brasil, 456'),
+(3, 'Escola Gama', 'Rua da Paz, 789'),
+(4, 'Escola Delta', 'Rua do Sol, 321'),
+(5, 'Colégio Épsilon', 'Av. das Nações, 654'),
+(6, 'Escola Zeta', 'Rua Independência, 777'),
+(7, 'Colégio Eta', 'Av. Liberdade, 888'),
+(8, 'Escola Teta', 'Rua das Flores, 111'),
+(9, 'Colégio Iota', 'Rua Central, 222'),
+(10, 'Escola Kappa', 'Av. Leste, 333');
 
-INSERT INTO Professor VALUES (1, 'Carlos Silva', 'Mestre', NULL, 1);
-INSERT INTO Professor VALUES (2, 'Ana Costa', 'Doutora', NULL, 2);
-INSERT INTO Professor VALUES (3, 'Marcos Lima', 'Especialista', NULL, 3);
-INSERT INTO Professor VALUES (4, 'Fernanda Rocha', 'Doutora', NULL, 4);
-INSERT INTO Professor VALUES (5, 'Joao Alves', 'Mestre', NULL, 5);
-INSERT INTO Professor VALUES (6, 'Paula Mendes', 'Mestre', NULL, 6);
-INSERT INTO Professor VALUES (7, 'Luciana Teixeira', 'Doutora', NULL, 7);
-INSERT INTO Professor VALUES (8, 'Rafael Souza', 'Especialista', NULL, 8);
-INSERT INTO Professor VALUES (9, 'Bruna Martins', 'Doutora', NULL, 9);
-INSERT INTO Professor VALUES (10, 'Eduardo Nunes', 'Mestre', NULL, 10);
+-- Inserções para Faculdade
+INSERT INTO Faculdade VALUES
+(3001, 'USP', 'Direito'),
+(3002, 'Unicamp', 'Engenharia'),
+(3003, 'UFRJ', 'Medicina'),
+(3004, 'PUC-SP', 'Psicologia'),
+(3005, 'UFPR', 'Física'),
+(3006, 'UFSC', 'Arquitetura'),
+(3007, 'UFMG', 'Administração'),
+(3008, 'UNESP', 'Matemática'),
+(3009, 'UNB', 'Geografia'),
+(3010, 'PUC-RJ', 'Filosofia');
 
-UPDATE Professor SET Cod_Escola = 101 WHERE Cod_Professor = 1;
-UPDATE Professor SET Cod_Escola = 102 WHERE Cod_Professor = 2;
-UPDATE Professor SET Cod_Escola = 103 WHERE Cod_Professor = 3;
-UPDATE Professor SET Cod_Escola = 104 WHERE Cod_Professor = 4;
-UPDATE Professor SET Cod_Escola = 105 WHERE Cod_Professor = 5;
-UPDATE Professor SET Cod_Escola = 106 WHERE Cod_Professor = 6;
-UPDATE Professor SET Cod_Escola = 107 WHERE Cod_Professor = 7;
-UPDATE Professor SET Cod_Escola = 108 WHERE Cod_Professor = 8;
-UPDATE Professor SET Cod_Escola = 109 WHERE Cod_Professor = 9;
-UPDATE Professor SET Cod_Escola = 110 WHERE Cod_Professor = 10;
+-- Inserções para Time
+INSERT INTO Interseries VALUES
+(4001, 'Tigres', '1A'),
+(4002, 'Leões', '1B'),
+(4003, 'Panteras', '2A'),
+(4004, 'Falcões', '2B'),
+(4005, 'Lobos', '3A'),
+(4006, 'Águias', '3B'),
+(4007, 'Cobras', '4A'),
+(4008, 'Tubas', '4B'),
+(4009, 'Raposas', '5A'),
+(4010, 'Jacarés', '5B');
 
-INSERT INTO Cargo VALUES (101, 1, 1, 2, 3);
-INSERT INTO Cargo VALUES (102, 2, 2, 3, 4);
-INSERT INTO Cargo VALUES (103, 3, 3, 4, 5);
-INSERT INTO Cargo VALUES (104, 4, 4, 5, 6);
-INSERT INTO Cargo VALUES (105, 5, 5, 6, 7);
-INSERT INTO Cargo VALUES (106, 6, 6, 7, 8);
-INSERT INTO Cargo VALUES (107, 7, 7, 8, 9);
-INSERT INTO Cargo VALUES (108, 8, 8, 9, 10);
-INSERT INTO Cargo VALUES (109, 9, 9, 10, 1);
-INSERT INTO Cargo VALUES (110, 10, 10, 1, 2);
+-- Inserções para Professor
+INSERT INTO Professor VALUES
+(2001, 'Carlos Silva', '11988880001', 3001, 1, 'Sim', 'Não'),
+(2002, 'Patrícia Lima', '11988880002', 3002, 2, 'Não', 'Sim'),
+(2003, 'Marcos Souza', '11988880003', 3003, 3, 'Sim', 'Sim'),
+(2004, 'Fernanda Dias', '11988880004', 3004, 4, 'Não', 'Não'),
+(2005, 'Tiago Rocha', '11988880005', 3005, 5, 'Sim', 'Não'),
+(2006, 'Luciana Melo', '11988880006', 3006, 6, 'Não', 'Sim'),
+(2007, 'José Santos', '11988880007', 3007, 7, 'Sim', 'Sim'),
+(2008, 'Paula Ferreira', '11988880008', 3008, 8, 'Não', 'Não'),
+(2009, 'Roberto Nunes', '11988880009', 3009, 9, 'Sim', 'Não'),
+(2010, 'Larissa Cunha', '11988880010', 3010, 10, 'Sim', 'Sim');
+
+-- Inserções para Estudante
+INSERT INTO Estudante VALUES
+(1001, 'Ana Lima', 'ana.lima@gmail.com', 1, 4001),
+(1002, 'Bruno Souza', 'bruno.souza@gmail.com', 2, 4002),
+(1003, 'Carla Silva', 'carla.silva@gmail.com', 3, 4003),
+(1004, 'Daniel Rocha', 'daniel.rocha@gmail.com', 4, 4004),
+(1005, 'Eduarda Martins', 'eduarda.martins@gmail.com', 5, 4005),
+(1006, 'Felipe Almeida', 'felipe.almeida@gmail.com', 6, 4006),
+(1007, 'Gabriela Costa', 'gabriela.costa@gmail.com', 7, 4007),
+(1008, 'Henrique Santos', 'henrique.santos@gmail.com', 8, 4008),
+(1009, 'Isabela Ramos', 'isabela.ramos@gmail.com', 9, 4009),
+(1010, 'João Pedro', 'joao.pedro@gmail.com', 10, 4010);
