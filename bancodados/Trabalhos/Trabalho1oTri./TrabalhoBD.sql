@@ -94,12 +94,12 @@ INSERT INTO Professor VALUES
 -- Inserções para Estudante
 INSERT INTO Estudante VALUES
 (1001, 'Ana Lima', 'ana.lima@gmail.com', 1, 4001),
-(1002, 'Bruno Souza', 'bruno.souza@gmail.com', 2, 4002),
-(1003, 'Carla Silva', 'carla.silva@gmail.com', 3, 4003),
-(1004, 'Daniel Rocha', 'daniel.rocha@gmail.com', 4, 4004),
-(1005, 'Eduarda Martins', 'eduarda.martins@gmail.com', 5, 4005),
-(1006, 'Felipe Almeida', 'felipe.almeida@gmail.com', 6, 4006),
-(1007, 'Gabriela Costa', 'gabriela.costa@gmail.com', 7, 4007),
-(1008, 'Henrique Santos', 'henrique.santos@gmail.com', 8, 4008),
+(1002, 'Bruno Souza', 'bruno.souza@gmail.com', 1, 4002),
+(1003, 'Carla Silva', 'carla.silva@gmail.com', 1, 4003),
+(1004, 'Daniel Rocha', 'daniel.rocha@gmail.com', 2, 4004),
+(1005, 'Eduarda Martins', 'eduarda.martins@gmail.com', 3, 4005),
+(1006, 'Felipe Almeida', 'felipe.almeida@gmail.com', 3, 4006),
+(1007, 'Gabriela Costa', 'gabriela.costa@gmail.com', 4, 4007),
+(1008, 'Henrique Santos', 'henrique.santos@gmail.com', 4, 4008),
 (1009, 'Isabela Ramos', 'isabela.ramos@gmail.com', 9, 4009),
-(1010, 'João Pedro', 'joao.pedro@gmail.com', 10, 4010);
+(1010, 'João Pedro', 'joao.pedro@gmail.com', 10, 4010);	
