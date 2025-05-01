@@ -80,16 +80,16 @@ INSERT INTO Interseries VALUES
 
 -- Inserções para Professor
 INSERT INTO Professor VALUES
-(2001, 'Carlos Silva', '11988880001', 3001, 1, 'Sim', 'Não'),
-(2002, 'Patrícia Lima', '11988880002', 3002, 2, 'Não', 'Sim'),
-(2003, 'Marcos Souza', '11988880003', 3003, 3, 'Sim', 'Sim'),
-(2004, 'Fernanda Dias', '11988880004', 3004, 4, 'Não', 'Não'),
-(2005, 'Tiago Rocha', '11988880005', 3005, 5, 'Sim', 'Não'),
-(2006, 'Luciana Melo', '11988880006', 3006, 6, 'Não', 'Sim'),
-(2007, 'José Santos', '11988880007', 3007, 7, 'Sim', 'Sim'),
-(2008, 'Paula Ferreira', '11988880008', 3008, 8, 'Não', 'Não'),
-(2009, 'Roberto Nunes', '11988880009', 3009, 9, 'Sim', 'Não'),
-(2010, 'Larissa Cunha', '11988880010', 3010, 10, 'Sim', 'Sim');
+(2001, 'Carlos Silva', '11988880001', 3002, 1, 'Sim', 'Não'),
+(2002, 'Patrícia Lima', '11988880002', 3002, 1, 'Não', 'Sim'),
+(2003, 'Marcos Souza', '11988880003', 3002, 1, 'Sim', 'Sim'),
+(2004, 'Fernanda Dias', '11988880004', 3004, 3, 'Não', 'Não'),
+(2005, 'Tiago Rocha', '11988880005', 3005, 4, 'Sim', 'Não'),
+(2006, 'Luciana Melo', '11988880006', 3005, 4, 'Não', 'Sim'),
+(2007, 'José Santos', '11988880007', 3005, 5, 'Sim', 'Sim'),
+(2008, 'Paula Ferreira', '11988880008', 3005, 5, 'Não', 'Não'),
+(2009, 'Roberto Nunes', '11988880009', 3009, 5, 'Sim', 'Não'),
+(2010, 'Larissa Cunha', '11988880010', 3010, 5, 'Sim', 'Sim');
 
 -- Inserções para Estudante
 INSERT INTO Estudante VALUES
