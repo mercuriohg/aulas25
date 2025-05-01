@@ -1,10 +1,10 @@
 --Consulta 1: Deve envolver as cláusulas Select – From – Where. A consulta deve envolver no mínimo duas tabelas e fazer sentido.
 SELECT 
-    * 
+    nome 
 FROM 
     estudante 
 WHERE 
-    codinterseries = 4001;
+    codescola = 1;
 
 --Consulta 2: Deve envolver as cláusulas Select – From – Where. Devem ser consultadas no mínimo 3 tabelas, a consulta deve fazer algum sentindo para o contexto escolhido.
 SELECT 
