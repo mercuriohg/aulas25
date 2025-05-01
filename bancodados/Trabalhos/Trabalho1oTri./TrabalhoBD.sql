@@ -1,4 +1,4 @@
---@Autores - Arthur Gomes, Carlos Henrique e Giovana Branco
+--@Autor - Arthur Gomes
 --Criação das Tabelas
 CREATE TABLE Escola (
     CodEscola INT PRIMARY KEY,
