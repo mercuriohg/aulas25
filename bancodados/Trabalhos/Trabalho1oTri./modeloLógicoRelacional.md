@@ -23,6 +23,5 @@ Cod_Escola Referencia Escola
 Cod_Professor Referencia Professor
 Diretor Referencia Professor
 Coordenador Referencia Professor
-Professor Referencia Professor
  
 ```
