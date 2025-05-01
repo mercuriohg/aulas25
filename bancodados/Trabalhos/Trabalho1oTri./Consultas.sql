@@ -52,4 +52,7 @@ HAVING
 ORDER BY 
     TotalProfessores DESC;
 
-
+--Consulta 1: Seleciono o nome de todos os alunos que estudam na escola de código 1.
+--Consulta 2: Seleciono os nomes, as escolas e os professores, onde esses professores tem o cargo de coordenador = "Sim".
+--Consulta 3: Seleciono as faculdades que formaram mais de 0 alunos. Existem faculdades que formam vários alunos, e alguns não se formam, então, pega as faculdades, a quantidade de alunos formados e ordena por ordem decrescente as faculdades que formaram mais que 0 alunos.
+--Consulta 4: Seleciono o nome das escolas e pego o total de prof's que tem nelas, e mostro as escolas que tem mais que o total de 1 professor. 
