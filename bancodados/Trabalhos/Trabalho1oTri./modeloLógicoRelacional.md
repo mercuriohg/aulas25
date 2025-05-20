@@ -8,7 +8,7 @@ Cod_Escola Referencia Escola
 
 FACULDADE(Cod_Faculdade, Nome, Curso)
 
-ESTUDANTES(Cod_Estudantes, Nome, Gmail, Celular, Cod_Escola, Cod_Interseries)
+ESTUDANTES(Cod_Estudantes, Nome, Gmail, Cod_Escola, Cod_Interseries)
 Cod_Escola Referencia Escola
 Cod_Interseries Referencia Interseries
 
