@@ -1,6 +1,25 @@
 --Consulta 1: Deve envolver as cláusulas Select – From – Where. A consulta deve envolver no mínimo duas tabelas e fazer sentido.
+SELECT 
+   nome 
+from 
+   estudante 
+where 
+   codescola = 1;
+   
 
 --Consulta 2: Deve envolver as cláusulas Select – From – Where. Devem ser consultadas no mínimo 3 tabelas, a consulta deve fazer algum sentindo para o contexto escolhido.
+SELECT 
+    escola.nome AS NomeEscola,  
+    professor.nome AS NomeProfessor
+FROM 
+    escola, 
+    professor,  
+WHERE 
+    professor.CodEscola = escola.CodEscola 
+    and professor.Coordenador = 'Sim';
+
+	
+	
 
 --Consulta 3: Essa consulta deve utilizar Select – From – Where – Group by – Having e Order by. Deve ser diferente das consultas anteriores e tem que envolver 2 ou mais tabelas e deve fazer algum sentido também.
 SELECT 
@@ -37,6 +56,10 @@ ORDER BY
     TotalProfessores DESC;
 
 --Consulta 1: Seleciono o nome de todos os alunos que estudam na escola de código 1.
---Consulta 2: Seleciono os nomes, as escolas e os professores, onde esses professores tem o cargo de coordenador = "Sim".
+
+--Consulta 2: Seleciono os nomes (de quem, dos estudantes? não tem sentido), as escolas e os professores, onde esses professores tem o cargo de coordenador = "Sim".
+
 --Consulta 3: Seleciono as faculdades que formaram mais de 0 alunos. Existem faculdades que formam vários alunos, e alguns não se formam, então, pega as faculdades, a quantidade de alunos formados e ordena por ordem decrescente as faculdades que formaram mais que 0 alunos.
+
 --Consulta 4: Seleciono o nome das escolas e pego o total de prof's que tem nelas, e mostro as escolas que tem mais que o total de 1 professor. 
+
