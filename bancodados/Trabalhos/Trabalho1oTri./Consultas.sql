@@ -1,22 +1,12 @@
 --Consulta 1: Deve envolver as cláusulas Select – From – Where. A consulta deve envolver no mínimo duas tabelas e fazer sentido.
 SELECT 
-   nome 
+   nome,
 from 
    estudante 
 where 
    codescola = 1;
 
 --Consulta 2: Deve envolver as cláusulas Select – From – Where. Devem ser consultadas no mínimo 3 tabelas, a consulta deve fazer algum sentindo para o contexto escolhido.
-SELECT 
-    estudante.nome AS NomeEstudante, escola.nome AS NomeEscola, professor.nome AS NomeProfessor
-FROM 
-    Estudante estudante 
-JOIN 
-    Escola escola ON estudante.CodEscola = escola.CodEscola 
-JOIN 
-    Professor professor ON professor.CodEscola = escola.CodEscola 
-WHERE 
-    professor.Coordenador = 'Sim';
 
 --Consulta 3: Essa consulta deve utilizar Select – From – Where – Group by – Having e Order by. Deve ser diferente das consultas anteriores e tem que envolver 2 ou mais tabelas e deve fazer algum sentido também.
 SELECT 
