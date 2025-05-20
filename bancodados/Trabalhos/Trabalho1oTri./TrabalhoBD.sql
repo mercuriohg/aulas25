@@ -21,23 +21,13 @@ CREATE TABLE Interseries (
 CREATE TABLE Professor (
     CodProfessor INT PRIMARY KEY,
     Nome VARCHAR(100),
-    Celular VARCHAR(20),
-    CodFaculdade INT,
-    CodEscola INT,
-    Coordenador VARCHAR(10),
-    Diretor VARCHAR(10),
-    FOREIGN KEY (CodFaculdade) REFERENCES Faculdade(CodFaculdade),
-    FOREIGN KEY (CodEscola) REFERENCES Escola(CodEscola)
+    Celular VARCHAR(20)
 );
 
 CREATE TABLE Estudante (
     CodEstudante INT PRIMARY KEY,
     Nome VARCHAR(100),
-    Gmail VARCHAR(100),
-    CodEscola INT,
-    CodInterseries INT,
-    FOREIGN KEY (CodEscola) REFERENCES Escola(CodEscola),
-    FOREIGN KEY (CodInterseries) REFERENCES Interseries(CodInterseries)
+    Gmail VARCHAR(100)
 );
 
 
@@ -105,3 +95,16 @@ INSERT INTO Estudante VALUES
 (1008, 'Henrique Santos', 'henrique.santos@gmail.com', 4, 4008),
 (1009, 'Isabela Ramos', 'isabela.ramos@gmail.com', 9, 4009),
 (1010, 'João Pedro', 'joao.pedro@gmail.com', 10, 4010);	
+
+
+--SELECTS 
+
+select * from escola; 
+
+select * from faculdade;
+
+select * from interseries;
+
+select * from professor;
+
+select * from estudante; 
