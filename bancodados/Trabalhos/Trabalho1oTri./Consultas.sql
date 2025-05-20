@@ -1,6 +1,6 @@
 --Consulta 1: Deve envolver as cláusulas Select – From – Where. A consulta deve envolver no mínimo duas tabelas e fazer sentido.
 SELECT 
-   nome,
+   nome, escola
 from 
    estudante 
 where 
