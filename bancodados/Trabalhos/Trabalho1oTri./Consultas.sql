@@ -18,9 +18,6 @@ WHERE
     professor.CodEscola = escola.CodEscola 
     and professor.Coordenador = 'Sim';
 
-	
-	
-
 --Consulta 3: Essa consulta deve utilizar Select – From – Where – Group by – Having e Order by. Deve ser diferente das consultas anteriores e tem que envolver 2 ou mais tabelas e deve fazer algum sentido também.
 SELECT 
     faculdade.nome AS NomeFaculdade,
