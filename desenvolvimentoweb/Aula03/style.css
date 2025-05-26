@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
+    margin: 0 auto;
+    text-align: justify;
 }
 header{
     background-color: aqua;
@@ -11,8 +12,10 @@ header{
 header>h1{
     text-align: center;
     margin-bottom: 5px;
+    font-size: 2em;
 }
 p{
+   padding: 20px;    
    text-align: center;
 }
 nav>ul{
@@ -21,6 +24,14 @@ nav>ul{
    padding: 10px;
 
 }
+h2{
+    font-size: 1.5em;
+    padding: 8px;
+    text-align: center;
+}
+h3{
+    font-size: 1.2em;
+}
 a{
     color: rgb(2, 2, 2);
     text-decoration: none;
@@ -28,4 +39,9 @@ a{
 a:hover{
     text-decoration: underline;
 }
-
+footer{
+    font-size: 0.8em;
+    background-color: black;
+    color: azure;
+    padding: 20px;
+}
