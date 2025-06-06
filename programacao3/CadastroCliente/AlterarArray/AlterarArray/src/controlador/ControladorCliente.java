@@ -25,7 +25,7 @@ public class ControladorCliente {
     JList<String> jListClientes;
     ArrayList<Cliente> listaCliente = new ArrayList<>();
     DefaultListModel defaultListModel = new DefaultListModel();
-    int index; 
+
     public ControladorCliente(JTextField jTextFieldId, JTextField jTextFieldNome, JTextField jTextFieldTelefone, JButton jButtonSalvarEditar, JList<String> jListProjetos) {
         this.jTextFieldId = jTextFieldId;
         this.jTextFieldNome = jTextFieldNome;
@@ -41,23 +41,16 @@ public class ControladorCliente {
         jTextFieldTelefone.setText("");
         //   jTextFieldId.setText(String.valueOf(gerarID()));
         jTextFieldId.setText(gerarID() + "");
-        jButtonSalvarEditar.setText("Salvar");
+
     }
 
     public void salvarCliente() {
         int id = Integer.parseInt(jTextFieldId.getText());
         String nome = jTextFieldNome.getText();
+
         String telefone = jTextFieldTelefone.getText();
         Cliente c = new Cliente(id, nome, telefone);
-
-        if(jButtonSalvarEditar.getText().compareToIgnoreCase("Salvar")==0){
-            listaCliente.add(c);
-        
-            
-        } else{
-            listaCliente.set(index, c);
-    
-        }
+        listaCliente.add(c);
         limpar();
         carregarLista();
     }
@@ -82,25 +75,11 @@ public class ControladorCliente {
             //  int indexU = listaCliente.size() - 1;
             //  Cliente u = listaCliente.get(indexU);
             //  novoID = u.getId() + 1;
-        } 
+        } else {
+           
+        }
 
         return novoID;
     }
-    
-    public void selecionarObjeto(){
-         String clienteSelecionado = jListClientes.getSelectedValue();
-         index = 0;
-         for (Cliente cliente : listaCliente){
-            String temp = cliente.getNome() + " - " + cliente.getId();
-            if (temp.compareToIgnoreCase(clienteSelecionado) == 0){
-                jTextFieldId.setText(cliente.getId()+"");
-                jTextFieldNome.setText(cliente.getNome());
-                jTextFieldTelefone.setText(cliente.getTelefone());
-                jButtonSalvarEditar.setText("Editar");
-                break;
-            }
-         index++;
-         
-       }
-   }
+
 }

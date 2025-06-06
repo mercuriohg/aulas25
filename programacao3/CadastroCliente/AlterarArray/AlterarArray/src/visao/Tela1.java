@@ -38,7 +38,7 @@ public class Tela1 extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jTextFieldTelefone = new javax.swing.JTextField();
         jButtonSalvarEditar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
@@ -60,10 +60,10 @@ public class Tela1 extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("Limpar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+        jButton2.setText("Limpar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -89,11 +89,10 @@ public class Tela1 extends javax.swing.JPanel {
                             .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
                         .addComponent(jButtonSalvarEditar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(37, 37, 37))))
+                        .addComponent(jButton2)
+                        .addGap(42, 42, 42))))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextFieldID, jTextFieldNome, jTextFieldTelefone});
@@ -118,7 +117,7 @@ public class Tela1 extends javax.swing.JPanel {
                 .addGap(94, 94, 94)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalvarEditar)
-                    .addComponent(jButton1))
+                    .addComponent(jButton2))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
 
@@ -164,16 +163,16 @@ public class Tela1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonSalvarEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarEditarActionPerformed
-     control.salvarCliente();
+control.salvarCliente();
     }//GEN-LAST:event_jButtonSalvarEditarActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-     control.selecionarObjeto();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+control.limpar();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonSalvarEditar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
