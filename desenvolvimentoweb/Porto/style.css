@@ -122,6 +122,18 @@ p {
     color: #FFD700;
 }
 
+li a {
+    color:black;
+    margin: 5px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: red;
+    color: white;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     #formulario {
