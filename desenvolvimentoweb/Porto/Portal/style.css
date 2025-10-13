@@ -1,0 +1,236 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Formulário */
+#formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-grow: 1;
+}
+
+#formulario label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+#caixadeform {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 250px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+#caixadeform:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#buttonins {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#buttonins:hover {
+    background-color: #0b7dda;
+    transform: translateY(-2px);
+}
+
+#buttonins:active {
+    transform: translateY(0);
+}
+
+/* Lista */
+#lista {
+    list-style-type: none;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#lista li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#lista li:hover {
+    background-color: #e9e9e9;
+}
+
+/* Contador */
+p {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+#quant {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+li a {
+    color:black;
+    margin: 5px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: red;
+    color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    
+}
+h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Wrapper section */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#categ {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#categ:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Produtos container */
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Produto cards */
+.produto-jardim, .produto-eletronico, .produto-livro {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.produto-jardim:hover, .produto-eletronico:hover, .produto-livro:hover {
+    transform: translateY(-5px);
+}
+
+.produto-jardim img, .produto-eletronico img, .produto-livro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto-jardim p, .produto-eletronico p, .produto-livro p {
+    margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #formulario {
+        flex-direction: column;
+    }
+
+    #caixadeform {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #lista {
+        padding: 10px;
+    }
+
+    .wrapper {
+        padding: 10px;
+    }
+
+    #produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-jardim, .produto-eletronico, .produto-livro {
+        width: 100%;
+        max-width: 300px;
+    }
+}
