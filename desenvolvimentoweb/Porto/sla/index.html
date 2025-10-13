@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Porto</title>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Site Incrível</h1>
+    </header>
+    <h2>
+        Trabalho para inserir itens em uma lista:
+    </h2>
+    <section class="form">
+        <form id="formulario">
+
+            <label>Item:</label>
+            <input type="text" id="caixadeform" placeholder="Insira o Produto">
+            <input type="button" id="buttonins" value="Inserir">
+        </form>
+    </section>
+
+    <ul id="lista">
+    </ul>
+    <h2>Projeto para mostrar e e sumir produto </h2>
+
+    <section class="wrapper">
+        <label for="categ">Mostrar produtos</label>
+        <select id="categ">
+            <option value="todos">Todos</option>
+            <option value="jardim">Jardinagem</option>
+            <option value="eletronico">Eletrônicos</option>
+            <option value="livro">Livros</option>
+
+            <div id="produtos">
+                <div class="jardim">
+                    <img src="" alt="Imagem de Jardinagem">
+                    <p>Bio do Produto</p>
+                    <p>Produto Legal</p>
+                </div>
+                <div class="eletronico">
+                    <img src="" alt="Imagem de Eletrônico">
+                    <p>Bio do Produto</p>
+                    <p>Produto Legal</p>
+                </div>
+                <div class="livro">
+                    <img src="" alt="Imagem de Livro">
+                    <p>Bio do Produto</p>
+                    <p>Produto Legal</p>
+                </div>
+            </div>
+        </select>
+    </section>
+    <p><span id="quant"> 0 </span></p>
+    <script text="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
