@@ -1,33 +1,66 @@
+:root{
+    --resedagreen: #6e8649;
+    --ferngreen: #477023;
+    --darkmoss: #2d531a;
+    --pakistangreen: #0d330e;
+}
+
 *{
     margin: 0;
     padding: 0;
     font: 18px;
 }
 body{
-    background-color: #2fa2;
+    background-color: var(--ferngreen);
 }
 header{
-    background-color: rgb(12, 207, 87);
+    background-color: var(--pakistangreen);
+    color: var(--resedagreen);
 }
 .container{
+    background-color: var(--resedagreen);
     border: 2px solid black;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 60px auto;
     justify-content: center;
+    width: 400px;
+    padding: 30px;
+    height: 400px;
+ 
 }
 input{
-    width: 15%;
-    margin: 20px;
+    padding:5px;
+    margin: 10px;
 }
-#addprod, #nome-produto , #botao{
-    width: 8%;
+ #nome-produto , #botao{
+    width: 80%;
+}
+#addprod{
+    width: 140px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 5px;
+    border: transparent;
+    border-radius: 50px;
+    background-color: var(--pakistangreen);
+    color: white;
+    cursor: pointer;
+}
+#addprod:hover{
+    transition: 0.5s;
+    transform: rotate(1.2deg) scale(1);
+    box-shadow: 2px 4px 5px black;
 }
 #categs{
     margin: 7px;
 }
-h1{
-    padding: 20px   ;
+h1, h2{
+    padding: 20px;
     text-align: center;
+}
+li{
+    padding: 20px;
+    margin: 10px;
 }
