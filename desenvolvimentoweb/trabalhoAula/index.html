@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho criar produto</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/pc.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -22,12 +23,22 @@
         <select id="categs">
             <option value="eletronicos">Eletrônicos</option>
             <option value="jardim">Jardinagem</option>
-            <option value="ferrament">Ferramentas</option>
+            <option value="ferramentas">Ferramentas</option>
             <option value="gifts">Presentes</option>
         </select>
 
         <input type="button" id="addprod" class="type-input" value="Adicionar Produto">
     </div>
+     <div id="prods-container">
+         <label for="categoria">Categoria do Produto: </label>
+            <select id="categoria">
+                <option value="todos">Todos</option>
+                <option value="eletronicos">Eletrônicos</option>
+                <option value="jardim">Jardinagem</option>
+                <option value="ferramentas">Ferramentas</option>
+                <option value="gifts">Presentes</option>
+            </select>
+     </div>
     <div class="produ">
       <ul id="lista-itens">
 
