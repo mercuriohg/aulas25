@@ -5,9 +5,15 @@ $(document).ready(function () {
     let preco = $("#botao").val();
     let fileInput = $("#arquivo")[0];
 
-    // valida imagem
+    // Valida imagem
     if (fileInput.files.length === 0) {
       alert("Selecione uma imagem!");
+      return;
+    }
+
+    // Valida o campo de preço
+    if (isNaN(preco) || preco.trim() === "") {
+      alert("O preço deve ser um número válido!");
       return;
     }
 
@@ -16,19 +22,21 @@ $(document).ready(function () {
 
     reader.onload = function (e) {
       let imgURL = e.target.result; // base64 da imagem
-      
-      let categoria = $("#categs").val()
-      // adiciona o item no UL
+      let categoria = $("#categs").val();
+
+      // Adiciona o item no UL
       $("#lista-itens").append(`
-            <li class="produto-${categoria}">
-                <p>
-                    <img src="${imgURL}" width="100"><br>
-                    Nome: ${nome}<br>
-                    Preço: R$ ${preco}<br>
-                    <a href="#" class="remover">Remover</a>
-                </p>
-            </li>
-            `);
+        <li class="produto-${categoria}">
+            <p>
+                <img src="${imgURL}" width="100"><br>
+                Nome: ${nome}<br>
+                Preço: R$ ${preco}<br>
+                <a href="#" class="remover">Remover</a>
+            </p>
+        </li>
+      `);
+
+      // Limpa os campos
       $("#nome-produto").val("");
       $("#botao").val("");
       $("#arquivo").val("");
@@ -37,12 +45,17 @@ $(document).ready(function () {
     reader.readAsDataURL(file);
   });
 
-  // Remover item
+  // Remover item com confirmação
   $("#lista-itens").on("click", ".remover", function (e) {
     e.preventDefault();
-    $(this).closest("li").remove()
-  })
 
+    // Confirmar remoção
+    if (window.confirm("Tem certeza de que deseja remover este item?")) {
+      $(this).closest("li").remove();
+    }
+  });
+
+  // Filtro por categoria
   $("#categoria").change(function () {
     const categoria = $(this).val();
 
